@@ -71,6 +71,8 @@ public class StudentDao {
 	}
 	public int delete(Long regNo)throws Exception
 	{int count=0;
+	
+	
 		String query="DELETE FROM KIST_STUDENT WHERE REGNO=?";
 		Connection con=getPooledConnection();
 		PreparedStatement ps=con.prepareStatement(query);
