@@ -34,8 +34,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="F:/JavaZoomApi/WEB-INF/lib/uploadbean.jar"/>
-	<classpathentry kind="lib" path="F:/JavaZoomApi/WEB-INF/lib/cos.jar"/>
-	<classpathentry kind="lib" path="F:/JavaZoomApi/WEB-INF/lib/fileupload.jar"/>
-	<classpathentry kind="lib" path="F:/JavaZoomApi/WEB-INF/lib/struts.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
