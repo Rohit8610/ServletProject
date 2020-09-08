@@ -2,6 +2,9 @@ package com.nt.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
@@ -32,5 +35,23 @@ public class StudentDao {
 	ps.setString(4, sb.getPassword());
 	count=ps.executeUpdate();
 	return count;
+	}
+	public List<StudentBean> view()throws Exception
+	{
+		String query="SELECT REGNO,NAME,EMAIL,PASSWORD FROM KIST_STUDENT";
+		List<StudentBean> lsb=new ArrayList<>();
+		Connection con=getPooledConnection();
+		PreparedStatement ps=con.prepareStatement(query);
+		ResultSet rs=ps.executeQuery();
+		while(rs.next())
+		{
+			StudentBean sb1=new StudentBean();
+			sb1.setRegNo(rs.getLong(1));
+			sb1.setName(rs.getString(2));
+			sb1.setEmail(rs.getString(3));
+			sb1.setPassword(rs.getString(4));
+		lsb.add(sb1);
+		}
+	return lsb;
 	}
 }

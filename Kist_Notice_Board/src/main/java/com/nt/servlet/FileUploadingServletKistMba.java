@@ -23,7 +23,7 @@ import javazoom.upload.UploadBean;
 import javazoom.upload.UploadFile;
 @WebServlet("/uploadurlkistmba")
 public class FileUploadingServletKistMba extends HttpServlet {
-private static final String query="insert into upload_kist_civil values(kist_mba_seq.nextval,?,?,?)";
+private static final String query="insert into upload_kist_mba values(kist_mba_seq.nextval,?,?,?)";
 @Resource(name="DsJndi")
 private DataSource ds;
 	public void doPost(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
@@ -55,7 +55,7 @@ java.sql.Date sd=new java.sql.Date(ms);
            System.out.println("FileUploadingServlet.doPost()");
 			ps.setString(1, name);
 			System.out.println("FileUploadingServlet.doPost()");
-			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC")+Fname1);
+			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC_MBA")+Fname1);
 			System.out.println("FileUploadingServlet.doPost()");
 			ps.setDate(3, sd);
 			int count=0;

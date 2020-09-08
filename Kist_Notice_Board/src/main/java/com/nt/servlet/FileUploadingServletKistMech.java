@@ -23,7 +23,7 @@ import javazoom.upload.UploadBean;
 import javazoom.upload.UploadFile;
 @WebServlet("/uploadurlkistmech")
 public class FileUploadingServletKistMech extends HttpServlet {
-private static final String query="insert into upload_kist_civil values(kist_mech_seq.nextval,?,?,?)";
+private static final String query="insert into upload_kist_mech values(kist_mech_seq.nextval,?,?,?)";
 @Resource(name="DsJndi")
 private DataSource ds;
 	public void doPost(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
@@ -43,7 +43,7 @@ private DataSource ds;
 Date d=new Date();
 long ms=d.getTime();
 java.sql.Date sd=new java.sql.Date(ms);
-			uplBean.setFolderstore("E:/store/photo/civil");
+			uplBean.setFolderstore("E:/store/photo/mech");
 			uplBean.store(nreq, "ephoto");
 				Hashtable map=nreq.getFiles();
 			String Fname1=((UploadFile) map.get("ephoto")).getFileName();
@@ -55,7 +55,7 @@ java.sql.Date sd=new java.sql.Date(ms);
            System.out.println("FileUploadingServlet.doPost()");
 			ps.setString(1, name);
 			System.out.println("FileUploadingServlet.doPost()");
-			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC")+Fname1);
+			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC_MECH")+Fname1);
 			System.out.println("FileUploadingServlet.doPost()");
 			ps.setDate(3, sd);
 			int count=0;

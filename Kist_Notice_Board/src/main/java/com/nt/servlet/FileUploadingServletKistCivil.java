@@ -55,7 +55,7 @@ java.sql.Date sd=new java.sql.Date(ms);
            System.out.println("FileUploadingServlet.doPost()");
 			ps.setString(1, name);
 			System.out.println("FileUploadingServlet.doPost()");
-			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC")+Fname1);
+			ps.setString(2,sc.getInitParameter("UPLOAD_PLOC_CIVIL")+Fname1);
 			System.out.println("FileUploadingServlet.doPost()");
 			ps.setDate(3, sd);
 			int count=0;
