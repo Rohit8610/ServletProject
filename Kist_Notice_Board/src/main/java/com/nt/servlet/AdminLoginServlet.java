@@ -23,6 +23,7 @@ public class AdminLoginServlet extends HttpServlet {
 	email=req.getParameter("email");
 	pwd=req.getParameter("pwd");
 	pw.println("<body>");
+	HttpSession ses=req.getSession();
  if(email.equalsIgnoreCase("admin@gmail.com") && pwd.equalsIgnoreCase("admin123"))
  {   
 	 pw.println("<h1 style='color:red;text-align:center'>Sucessfully login</h1>");

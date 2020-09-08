@@ -21,9 +21,9 @@ import javax.sql.DataSource;
 import javazoom.upload.MultipartFormDataRequest;
 import javazoom.upload.UploadBean;
 import javazoom.upload.UploadFile;
-@WebServlet("/uploadurlkist")
-public class FileUploadingServletKist extends HttpServlet {
-private static final String query="insert into upload_kist values(?,?,kist_seq.nextval,?)";
+@WebServlet("/uploadurlkistmba")
+public class FileUploadingServletKistMba extends HttpServlet {
+private static final String query="insert into upload_kist_civil values(kist_mba_seq.nextval,?,?,?)";
 @Resource(name="DsJndi")
 private DataSource ds;
 	public void doPost(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
@@ -43,7 +43,7 @@ private DataSource ds;
 Date d=new Date();
 long ms=d.getTime();
 java.sql.Date sd=new java.sql.Date(ms);
-			uplBean.setFolderstore("E:/store/photo");
+			uplBean.setFolderstore("E:/store/photo/mba");
 			uplBean.store(nreq, "ephoto");
 				Hashtable map=nreq.getFiles();
 			String Fname1=((UploadFile) map.get("ephoto")).getFileName();
@@ -109,9 +109,10 @@ java.sql.Date sd=new java.sql.Date(ms);
 			se.printStackTrace();
 		}
 		pw.println("<br>");
-		pw.println("<a href='Upload.html'>Upload File</a>");
+		pw.println("<a href='Uploadmba.html'>Upload File</a>");
 		pw.println("<br>");
 		pw.println("<a href='NoticeSection.html'>Notice Section</a>");
+
 
 		pw.close();
 		}
