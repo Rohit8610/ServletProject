@@ -35,9 +35,20 @@
 	<servlet-name>StudentLogout</servlet-name>
 	<servlet-class>com.nt.servlet.StudentLogout</servlet-class>
 </servlet>
+<servlet>
+	<description>
+	</description>
+	<display-name>DeleteStudent</display-name>
+	<servlet-name>DeleteStudent</servlet-name>
+	<servlet-class>com.nt.servlet.DeleteStudent</servlet-class>
+</servlet>
 <servlet-mapping>
 	<servlet-name>StudentLogout</servlet-name>
 	<url-pattern>/StudentLogout</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>DeleteStudent</servlet-name>
+	<url-pattern>/DeleteStudent</url-pattern>
 </servlet-mapping>
 
 <welcome-file-list>
