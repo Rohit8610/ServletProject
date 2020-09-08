@@ -28,6 +28,17 @@
 <param-name>UPLOAD_PLOC_MECH</param-name>
 <param-value>E:/store/photo/mech/</param-value>
 </context-param>
+<servlet>
+	<description>
+	</description>
+	<display-name>StudentLogout</display-name>
+	<servlet-name>StudentLogout</servlet-name>
+	<servlet-class>com.nt.servlet.StudentLogout</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>StudentLogout</servlet-name>
+	<url-pattern>/StudentLogout</url-pattern>
+</servlet-mapping>
 
 <welcome-file-list>
 <welcome-file> Home.html</welcome-file>

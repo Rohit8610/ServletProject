@@ -54,4 +54,19 @@ public class StudentDao {
 		}
 	return lsb;
 	}
+	public Boolean valid(String email, String pwd)throws Exception
+	{ Boolean flag=false;
+		String query="SELECT REGNO,NAME,EMAIL,PASSWORD FROM KIST_STUDENT WHERE EMAIL=? AND PASSWORD=?";
+	
+		Connection con=getPooledConnection();
+		PreparedStatement ps=con.prepareStatement(query);
+		ps.setString(1, email);
+		ps.setString(2, pwd);
+		ResultSet rs=ps.executeQuery();
+		if(rs.next())
+		{
+			flag=true;
+		}
+		return flag;
+	}
 }
