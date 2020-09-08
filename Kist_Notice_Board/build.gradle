@@ -18,6 +18,9 @@ repositories {
 }
 
 dependencies {
+// https://mvnrepository.com/artifact/de.huxhorn.sulky/de.huxhorn.sulky.3rdparty.jlayer
+implementation group: 'de.huxhorn.sulky', name: 'de.huxhorn.sulky.3rdparty.jlayer', version: '1.0'
+
    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
 implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 // https://mvnrepository.com/artifact/commons-io/commons-io
