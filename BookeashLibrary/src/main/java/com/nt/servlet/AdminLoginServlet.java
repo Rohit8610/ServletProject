@@ -43,7 +43,7 @@ public class AdminLoginServlet extends HttpServlet {
  else
  { pw.println("<style>");
  pw.println("body {");
- pw.println("background-image: url('images/admin1.jpg');");
+ pw.println("background-image: url('images/admin8.jpg');");
  pw.println("background-size: 100% 200%;");
   pw.println("}");
 pw.println("</style>");
